@@ -1,0 +1,14 @@
+{
+  "author": "Karl Seguin <karl@openmymind.net> (http://openmymind.net/)",
+  "name": "mongospy",
+  "version": "0.0.1",
+  "repository" : { 
+    "type": "git",
+    "url": "http://github.com/karlseguin/mongospy.git" 
+  },
+  "engines": { "node": ">=v0.4.0" },
+  "dependencies": {
+    "mongodb": ">= 0.9.6",
+    "socket.io": ">= 0.8.4"
+  }
+}
