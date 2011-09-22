@@ -1,1 +1,51 @@
-coming soon
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MongoSpy</title>
+    <link href="assets/site.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/site.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      <h2>About MongoSpy</h2>
+      <p>
+        MongoSpy let's you keep an eye on MongoDB activity from your browser's console. 
+        It runs as a lightweight node.js socket.io-powered application which monitors the system.profile collection of your database. 
+        When developing, simply start up the server, include a javascript file in your layout, and watch it go.
+      </p> 
+      <h2>Installation</h2>
+      <p>Installation is easy. First though, you'll want to <a href="https://github.com/joyent/node/wiki/Installation">install node.js</a> if you haven't already done so.</p>
+      
+      <h3>Step 1 - Set Things Up</h3>
+      <p>&raquo; clone the repository and install the dependencies (<a href="http://socket.io">socket.io</a> and <a href="https://github.com/christkv/node-mongodb-native">mongodb driver</a>)
+      <pre>
+git clone git://github.com/karlseguin/mongospy.git
+cd mongospy
+npm install</pre>
+
+      <h3>Step 2 - Run The Server</h3>
+      <p>&raquo; You might want to edit <code>lib/config.js</code> to change the default port or MongoDB connection information</p>
+      <pre>node app.js DB_NAME_TO_SPY_ON</pre>
+      
+      <h3>Step 3 - Include The Script(s)</h3>
+      <p>&raquo; If you're already including jQuery, you can skip the first line</p>
+      <pre>
+&lt;script type="text/javascript" src="http://127.0.0.1:27117/socket.io/socket.io.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://127.0.0.1:27117/"&gt;&lt;/script&gt;</pre>
+
+      <h3>Step 4 - Look at your console</h3>
+      <img src="assets/ss.gif" />
+
+      <h2>Notes</h2>
+      <p>Do not run this in production</p>
+    </div>
+    <img src="assets/leaf.png" id="leaf" />
+    <div id="footer">
+      <div>
+        <a href="http://github.com/karlseguin/mongospy">fork it</a>
+        <a href="http://openmymind.net/">openmymind.net</a>
+      </div>
+    </div>
+  </body>
+</html>
